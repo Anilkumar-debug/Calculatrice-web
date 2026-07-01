@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice — Premium Mobile & Desktop Scientific Calculator</title>
+  <meta name="description" content="Download Calculatrice, the ultimate offline-first, scientific mobile and desktop calculator. Features interactive graphing, step-by-step math solvers, and a curated reference library of 56 essential formulas.">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+  <!-- Background Layer -->
+  <div class="mesh-bg"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo-wrap">
+        <img src="app_logo.png" alt="Calculatrice App Logo" class="logo-img">
+        <span class="logo-text">Calculatrice</span>
+      </div>
+      <nav>
+        <ul id="nav-list">
+          <li><a href="#features" id="nav-features">Features</a></li>
+          <li><a href="#faq" id="nav-faq">FAQ</a></li>
+          <li><a href="#download" id="nav-download-link" class="nav-cta">Download Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-tagline">Offline-First Academic Engine</span>
+        <h1 class="hero-headline">Calculatrice.<br>The Art of Calculation.</h1>
+        <p class="hero-desc">
+          A premium, dark-mode locked mathematical engine designed for students, researchers, and engineers. Solve algebra, visualize custom graphs, and reference 56 essential formulas on the go.
+        </p>
+
+      </div>
+      <div class="hero-visual">
+        <!-- Phone Mockup showing Splash Screen -->
+        <div class="phone-wrapper">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <img src="photo.jpg" alt="Calculatrice Splash Screen" class="phone-screenshot-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bento Features Section -->
+  <section id="features" class="section-padding reveal">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Designed for advanced academic workflows</h2>
+      </div>
+      <div class="bento-grid">
+        <!-- Cell 1: Scientific Engine & Parser -->
+        <div class="bento-card col-4">
+          <div class="bento-card-content">
+            <div class="card-icon">🔬</div>
+            <h3>Scientific Calculator Engine</h3>
+            <p>A custom-built mathematical expression interpreter that parses complex equations, logarithms, trig ratios, and physical constants with extreme accuracy.</p>
+          </div>
+          <div class="bento-visual-container">
+            <div class="history-visual" style="grid-template-columns: repeat(4, 1fr); display: grid; gap: 8px; width: 85%;">
+              <div class="history-row" style="justify-content: center;"><span>sin</span></div>
+              <div class="history-row" style="justify-content: center;"><span>cos</span></div>
+              <div class="history-row" style="justify-content: center;"><span>log</span></div>
+              <div class="history-row" style="justify-content: center;"><span>ln</span></div>
+              <div class="history-row" style="justify-content: center;"><span>√</span></div>
+              <div class="history-row" style="justify-content: center;"><span>^</span></div>
+              <div class="history-row" style="justify-content: center;"><span>π</span></div>
+              <div class="history-row" style="justify-content: center;"><span>e</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cell 2: Graphing Visualizer -->
+        <div class="bento-card col-4">
+          <div class="bento-card-content">
+            <div class="card-icon">📈</div>
+            <h3>Graphing Visualizer</h3>
+            <p>Input custom mathematical functions like y = sin(x) and analyze curves instantly on a Cartesian coordinate plane.</p>
+          </div>
+          <div class="bento-visual-container">
+            <!-- Simulated sine wave graph -->
+            <svg width="100%" height="100%" viewBox="0 0 200 120" style="opacity: 0.85;">
+              <line x1="10" y1="60" x2="190" y2="60" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+              <line x1="100" y1="10" x2="100" y2="110" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+              <path d="M 10 60 Q 55 -10 100 60 T 190 60" fill="none" stroke="var(--accent-primary)" stroke-width="2" />
+              <circle cx="100" cy="60" r="3" fill="var(--accent-secondary)" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Cell 3: Formula Library -->
+        <div class="bento-card col-4 formula-card">
+          <div class="bento-card-content">
+            <div class="card-icon">📚</div>
+            <h3>Curated Formulas</h3>
+            <p>Instant access to reference equations directly inside your workspace:</p>
+            <div class="formula-simple-list" style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px; text-align: left;">
+              <div style="font-size: 0.85rem; color: var(--text-muted);">
+                <strong style="color: var(--text-main);">Quadratic Equation:</strong>
+                <code style="display: block; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: var(--radius-sm); margin-top: 6px; color: var(--accent-primary); font-family: var(--font-mono); border: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem;">x = (-b ± √(b² - 4ac)) / 2a</code>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">
+                <strong style="color: var(--text-main);">Derivative Power Rule:</strong>
+                <code style="display: block; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: var(--radius-sm); margin-top: 6px; color: var(--accent-primary); font-family: var(--font-mono); border: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem;">d/dx(xⁿ) = n·xⁿ⁻¹</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section-padding reveal">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item" id="faq-1">
+          <div class="faq-header">
+            <span class="faq-question">Why is the app not on the Play Store yet?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>Calculatrice is currently in beta. We release it directly here to get quick feedback from users before publishing it on mainstream app stores.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-2">
+          <div class="faq-header">
+            <span class="faq-question">How do I install it on Android?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>Click "Download APK" below. Open the downloaded file on your device. If prompted, allow installations from your browser. The app is completely safe, private, and ad-free.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-3">
+          <div class="faq-header">
+            <span class="faq-question">When are the iOS and Windows versions coming?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>Both Windows and iOS versions are currently in internal testing. We will post the direct download links here as soon as they are ready.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-4">
+          <div class="faq-header">
+            <span class="faq-question">Does the app collect any data?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>No. Calculatrice is built as an offline-first tool. All calculations, variables, and graphs are computed and stored locally on your device. We do not upload any data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Center -->
+  <section id="download" class="section-padding reveal">
+    <div class="container">
+      <div class="download-card">
+        <h2 class="section-title" style="margin-top: 0;">Get Calculatrice today</h2>
+        <p style="max-width: 500px; margin: 0 auto;">
+          Experience a beautiful, fluid way to interact with equations. Download the direct installation file below.
+        </p>
+        
+        <div class="download-badges">
+          <!-- Android APK Badge -->
+          <a href="calculatrice-release.apk" download="calculatrice.apk" class="download-badge" id="dl-android" aria-label="Download Android APK">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3,5.27V18.73L16.55,12L3,5.27M17.87,11.33L19.86,12.33C20.39,12.6 20.39,13.4 19.86,13.67L17.87,14.67L14.47,12.97L17.87,11.33M3,3.55L14.7,11.75L18.4,9.9L3.7,2.23C3.33,2.05 3,2.4 3,2.8V3.55M3,20.45C3,20.8 3.33,21.15 3.7,20.97L18.4,13.3L14.7,11.45L3,19.65V20.45Z" />
+            </svg>
+            <div class="badge-text-wrap">
+              <span class="badge-sub">Android Build</span>
+              <span class="badge-title">Download APK</span>
+            </div>
+          </a>
+          
+          <!-- Windows Desktop ZIP Coming Soon Badge -->
+          <div class="download-badge coming-soon" style="opacity: 0.45; cursor: not-allowed;" title="Windows version coming soon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <line x1="9" y1="3" x2="9" y2="21" />
+              <line x1="3" y1="9" x2="21" y2="9" />
+            </svg>
+            <div class="badge-text-wrap">
+              <span class="badge-sub">Windows Desktop</span>
+              <span class="badge-title">Coming Soon</span>
+            </div>
+          </div>
+
+          <!-- iOS Coming Soon Badge -->
+          <div class="download-badge coming-soon" style="opacity: 0.45; cursor: not-allowed;" title="iOS version coming soon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,22C14.32,22.05 13.89,21.24 12.37,21.24C10.84,21.24 10.37,21.97 9.1,22.03C7.79,22.08 6.8,20.74 5.96,19.53C4.26,17.06 2.97,12.5 4.72,9.45C5.59,7.94 7.15,7 8.83,7C10.1,7 11.3,7.88 12.08,7.88C12.86,7.88 14.3,6.84 15.84,7C16.5,7.03 18.31,7.27 19.5,9C19.4,9.07 17.15,10.38 17.17,13.06C17.2,16.24 19.92,17.3 19.95,17.32C19.93,17.39 19.51,18.82 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z" />
+            </svg>
+            <div class="badge-text-wrap">
+              <span class="badge-sub">iOS Version</span>
+              <span class="badge-title">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  <!-- User Reviews Section -->
+  <section id="reviews" class="section-padding reveal" style="padding-top: 40px; padding-bottom: 60px;">
+    <div class="container">
+      <div class="bento-card" style="display: block; padding: 40px;">
+        <h3 style="margin-top: 0; margin-bottom: 24px; font-size: 1.4rem;">Send Feedback</h3>
+        
+        <form id="review-form" class="reviews-single-line-form">
+          <input type="text" id="review-name" class="form-input" required placeholder="Your Name" style="flex: 1; min-width: 150px;">
+          
+          <div class="star-rating-wrap" style="flex: 0 0 auto; display: flex; align-items: center; height: 46px; box-sizing: border-box;">
+            <div class="star-rating" id="form-stars">
+              <span class="star-btn active" data-value="1">★</span>
+              <span class="star-btn active" data-value="2">★</span>
+              <span class="star-btn active" data-value="3">★</span>
+              <span class="star-btn active" data-value="4">★</span>
+              <span class="star-btn active" data-value="5">★</span>
+            </div>
+            <input type="hidden" id="review-rating" required value="5">
+          </div>
+          
+          <input type="text" id="review-message" class="form-input" required placeholder="Write your review..." style="flex: 2; min-width: 250px;">
+          
+          <button type="submit" class="submit-review-btn" id="submit-review-btn">
+            <span class="btn-text">Submit</span>
+            <div class="btn-loader" id="submit-review-loader"></div>
+          </button>
+        </form>
+        <div class="submit-feedback success" id="form-success-msg">✓ Review submitted successfully to Telegram!</div>
+        <div class="submit-feedback error" id="form-error-msg">✗ Submission failed. Please check setup.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <img src="app_logo.png" alt="Calculatrice App Logo" class="logo-img">
+          <span class="logo-text">Calculatrice</span>
+        </div>
+        <p class="footer-desc">
+          Building minimalist mobile utilities that bring delight to everyday operations.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Downloads</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="security.html">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Calculatrice. All rights reserved.</span>
+      <span>Designed with precision.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>

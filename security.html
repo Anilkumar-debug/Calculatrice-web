@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Statement — Calculatrice</title>
+  <meta name="description" content="Security policy and practices for Calculatrice scientific calculator.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Layer -->
+  <div class="mesh-bg"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrap">
+        <img src="app_logo.png" alt="Calculatrice App Logo" class="logo-img">
+        <span class="logo-text">Calculatrice</span>
+      </a>
+      <nav>
+        <ul id="nav-list">
+          <li><a href="index.html#features" id="nav-features">Features</a></li>
+          <li><a href="index.html#faq" id="nav-faq">FAQ</a></li>
+          <li><a href="index.html#download" id="nav-download-link" class="nav-cta">Download Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Security Section -->
+  <section class="section-padding" style="padding-top: 130px;">
+    <div class="container" style="max-width: 800px;">
+      <div style="margin-bottom: 40px; text-align: center;">
+        <span class="hero-tagline" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.2em; text-transform: uppercase;">App Security</span>
+        <h1 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-top: 10px; margin-bottom: 12px; background: linear-gradient(135deg, #fff 40%, rgba(255, 255, 255, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em;">Security Practices</h1>
+        <p style="color: var(--text-muted);">Last Updated: July 1, 2026</p>
+      </div>
+      
+      <div class="bento-card" style="display: block; padding: 40px; border-radius: var(--radius-lg); background-color: var(--bg-card); border: 1px solid var(--border-color); backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
+        <div class="bento-card-content" style="margin-bottom: 32px;">
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px; font-weight: 700;">1. Zero Network Surface</h3>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+            Calculatrice has zero network features. The mobile app does not declare the `android.permission.INTERNET` flag in its AndroidManifest.xml. This means that the operating system physically restricts the application from transmitting or receiving any data over the internet, rendering remote data exfiltration attacks mathematically impossible.
+          </p>
+        </div>
+
+        <div class="bento-card-content" style="margin-bottom: 32px;">
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px; font-weight: 700;">2. Package Verification and Integrity</h3>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+            To verify that you are running an untampered build of Calculatrice, always cross-reference the SHA-256 checksum of your downloaded installation packages.
+          </p>
+          <div style="background: rgba(15, 23, 42, 0.4); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-primary); line-height: 1.5; word-break: break-all;">
+            <strong>SHA-256 APK Checksum:</strong><br>
+            e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+          </div>
+        </div>
+
+        <div class="bento-card-content" style="margin-bottom: 32px;">
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px; font-weight: 700;">3. Sandboxed Local Environment</h3>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+            The app utilizes standard OS sandboxing rules. Any data cached locally (such as variables, settings, or calculations history) is stored inside the app's isolated local storage partition, which cannot be accessed by other applications on the same device without root access.
+          </p>
+        </div>
+
+        <div class="bento-card-content" style="margin-bottom: 0;">
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px; font-weight: 700;">4. Vulnerability Disclosure</h3>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+            We welcome code security reviews. If you find security concerns within our offline binary execution flow, please contact our team via the secure distribution channels or file an issue on our official code repository.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <img src="app_logo.png" alt="Calculatrice App Logo" class="logo-img">
+          <span class="logo-text">Calculatrice</span>
+        </div>
+        <p class="footer-desc">
+          Building minimalist mobile utilities that bring delight to everyday operations.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#download">Downloads</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="security.html">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Calculatrice. All rights reserved.</span>
+      <span>Designed with precision.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
