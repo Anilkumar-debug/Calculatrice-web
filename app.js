@@ -7,15 +7,11 @@
 const TELEGRAM_BOT_TOKEN = "8309493401:AAFO1eUcsQkDXHkJ6yGEszXYoQpnmEDahyM"; // e.g., "123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ"
 const TELEGRAM_CHAT_ID = "6990478240";   // e.g., "987654321" or "@your_channel_name"
 
-// --- SUPABASE CONFIGURATION ---
-const SUPABASE_URL = "https://rurvyqrctfoouonkikbo.supabase.co";
-const SUPABASE_KEY = "sb_publishable_3tdWAFJMEfhqZo9UddYvAg_Q0V4InQk";
 
 document.addEventListener("DOMContentLoaded", () => {
   initFaqAccordion();
   initScrollReveal();
   initReviewsForm();
-  initDownloadTracking();
 });
 
 /* ==========================================================================
@@ -141,7 +137,9 @@ function initReviewsForm() {
     successMsg.style.display = "none";
     errorMsg.style.display = "none";
 
-    const telegramMessage = `🌟 *New Review Received!*\n\n👤 *Name:* ${name}\n⭐ *Rating:* ${rating}/5 Stars\n💬 *Message:* ${message}`;
+    const escapedName = name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const escapedMessage = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const telegramMessage = `🌟 <b>New Review Received!</b>\n\n👤 <b>Name:</b> ${escapedName}\n⭐ <b>Rating:</b> ${rating}/5 Stars\n💬 <b>Message:</b> ${escapedMessage}`;
 
     // If no credentials configured, show simulation alert
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
@@ -172,7 +170,7 @@ function initReviewsForm() {
         body: JSON.stringify({
           chat_id: TELEGRAM_CHAT_ID,
           text: telegramMessage,
-          parse_mode: "Markdown"
+          parse_mode: "HTML"
         })
       });
 
@@ -201,47 +199,5 @@ function initReviewsForm() {
   });
 }
 
-/* ==========================================================================
-   5. Download Tracking Handler
-   ========================================================================== */
-function initDownloadTracking() {
-  const downloadBtn = document.getElementById("dl-android");
-  if (!downloadBtn) return;
-
-  downloadBtn.addEventListener("click", async () => {
-    const downloadData = {
-      clicked_at: new Date().toISOString(),
-      user_agent: navigator.userAgent,
-      referrer: document.referrer || "direct",
-      platform: "android",
-      screen_resolution: `${window.screen.width}x${window.screen.height}`
-    };
-
-    console.log("Tracking download:", downloadData);
-
-    try {
-      const { createClient } = window.supabase;
-      if (!createClient) {
-        console.error("Supabase client not loaded.");
-        return;
-      }
-      
-      const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-      
-      // Attempt to insert record into the 'apk_downloads' table
-      const { error } = await supabase
-        .from("apk_downloads")
-        .insert([downloadData]);
-
-      if (error) {
-        console.error("Error inserting download stats:", error);
-      } else {
-        console.log("Successfully tracked download in Supabase.");
-      }
-    } catch (err) {
-      console.error("Failed to track download:", err);
-    }
-  });
-}
 
 

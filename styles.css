@@ -1171,45 +1171,53 @@ footer {
 /* ==========================================================================
    Reviews Section Styles
    ========================================================================== */
-.reviews-single-line-form {
+.reviews-form {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
   width: 100%;
 }
 
-@media (max-width: 900px) {
-  .reviews-single-line-form {
-    flex-direction: column;
-    align-items: stretch;
+.reviews-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .reviews-form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  
-  .reviews-single-line-form .submit-review-btn {
-    width: 100% !important;
+  .submit-review-btn {
+    width: 100%;
+    align-self: stretch;
   }
 }
 
 .form-group {
-  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
   text-align: left;
-}
-
-@media (max-width: 900px) {
-  .form-group {
-    margin-bottom: 16px;
-  }
+  width: 100%;
 }
 
 .form-label {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.form-textarea {
+  height: 120px !important;
+  padding: 12px 16px !important;
+  resize: vertical;
 }
 
 .form-input {
@@ -1271,6 +1279,7 @@ footer {
   position: relative;
   font-size: 0.95rem;
   flex: 0 0 auto;
+  align-self: flex-start;
 }
 
 .submit-review-btn:hover {
